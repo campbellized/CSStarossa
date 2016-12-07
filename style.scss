@@ -1,7 +1,11 @@
 $color-sky: #4848f8;
 $color-ground: #f8d68c;
 $color-road: #909090;
-$color-median: green;
+
+$color-car: #9D302F;
+$car-tail-light: #800000;
+$car-turn-signal: #C8740D;
+$car-reverse: #E6C7C2;
 
 html, body {
     margin: 0;
@@ -124,6 +128,136 @@ h1 {
           transform: translateX(100%);
         }
 
+    }
+
+    .canvas__sprites {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 50%;
+      width: 100%;
+    }
+
+    .car {
+      width: 120px;
+      height: 30px;
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .car__rear {
+      background: $color-car;
+      position: absolute;
+      z-index: 10;
+      width: 120px;
+      height: 30px;
+    }
+
+    .car__tail-light {
+      background: black;
+      width: 120px;
+      height: 12px;
+      position: absolute;
+      bottom: 12px;
+      left: 0;
+      z-index: 20;
+    }
+
+    .tail-light__left {
+      background: $car-tail-light;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 40px;
+
+      .tail-light__turn {
+        background: $car-turn-signal;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 50%;
+        width: 75%;
+      }
+
+      .tail-light__reverse {
+        background: $car-reverse;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 50%;
+        width: 25%;
+      }
+    }
+
+    .tail-light__right {
+      background: $car-tail-light;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 40px;
+
+      .tail-light__turn {
+        background: $car-turn-signal;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 50%;
+        width: 75%;
+      }
+
+      .tail-light__reverse {
+        background: $car-reverse;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 50%;
+        width: 25%;
+      }
+    }
+
+    .car__bumper {
+      background: $color-car;
+      width: 120px;
+      height: 10px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin-bottom: -5px;
+      border-radius: 30%;
+      z-index: 10;
+    }
+
+    .car__tires {
+      width: 120px;
+      height: 30px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin-bottom: -15px;
+    }
+
+    .tires__left {
+      width: 20px;
+      height: 30px;
+      background: black;
+      position: absolute;
+      bottom: 0;
+      left: 2px;
+      border-radius: 12%;
+    }
+
+    .tires__right {
+      width: 20px;
+      height: 30px;
+      background: black;
+      position: absolute;
+      bottom: 0;
+      right: 2px;
+      border-radius: 12%;      
     }
 }
 

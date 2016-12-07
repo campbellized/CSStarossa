@@ -98,6 +98,108 @@ h1 {
       right: 0;
       height: 100%;
       transform: translateX(100%); }
+  .canvas .canvas__sprites {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 100%; }
+  .canvas .car {
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%); }
+  .canvas .car__rear {
+    background: #9D302F;
+    position: absolute;
+    z-index: 10;
+    width: 120px;
+    height: 30px; }
+  .canvas .car__tail-light {
+    background: black;
+    width: 120px;
+    height: 12px;
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    z-index: 20; }
+  .canvas .tail-light__left {
+    background: #800000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 40px; }
+    .canvas .tail-light__left .tail-light__turn {
+      background: #C8740D;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 50%;
+      width: 75%; }
+    .canvas .tail-light__left .tail-light__reverse {
+      background: #E6C7C2;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 50%;
+      width: 25%; }
+  .canvas .tail-light__right {
+    background: #800000;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 40px; }
+    .canvas .tail-light__right .tail-light__turn {
+      background: #C8740D;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 50%;
+      width: 75%; }
+    .canvas .tail-light__right .tail-light__reverse {
+      background: #E6C7C2;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 50%;
+      width: 25%; }
+  .canvas .car__bumper {
+    background: #9D302F;
+    width: 120px;
+    height: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -5px;
+    border-radius: 30%;
+    z-index: 10; }
+  .canvas .car__tires {
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -15px; }
+  .canvas .tires__left {
+    width: 20px;
+    height: 30px;
+    background: black;
+    position: absolute;
+    bottom: 0;
+    left: 2px;
+    border-radius: 12%; }
+  .canvas .tires__right {
+    width: 20px;
+    height: 30px;
+    background: black;
+    position: absolute;
+    bottom: 0;
+    right: 2px;
+    border-radius: 12%; }
 
 @keyframes lines-forward {
   0% {
