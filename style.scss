@@ -1,6 +1,7 @@
 $color-sky: #4848f8;
 $color-ground: #f8d68c;
 $color-road: #909090;
+$color-median: green;
 
 html, body {
     margin: 0;
@@ -52,11 +53,11 @@ h1 {
     }
 
     .canvas__fg {
-        background: $color-ground;
+        // background: $color-ground;
         position: absolute;
         bottom: 0;
         left: 0;
-        height: 40%;
+        height: 50%;
         width: 100%;
         overflow: hidden;
         perspective: 30px;
@@ -68,10 +69,23 @@ h1 {
         height: 100%;
         width: 300px;
         margin: auto;
-        transform: rotateX(90deg);
-        overflow: hidden;
+        transform: rotateX(120deg);
         position: relative;
 
+        .road__lines {
+          position: absolute;
+          overflow: hidden;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          animation-name: lines-forward;
+          animation-duration: 300ms;
+          animation-timing-function: linear;
+          animation-delay: 0;
+          animation-direction: forward;
+          animation-iteration-count: infinite;
+        }
         .road__lines-inner {
             border: 3px dashed #fff;
             height: 150%;
@@ -89,5 +103,35 @@ h1 {
             bottom: -3px;
             box-sizing: border-box;
         }
+
+        .road__left-median {
+          background: $color-ground;
+          position: absolute;
+          width: 500%;
+          bottom: 0;
+          left: 0;
+          height: 100%;
+          transform: translateX(-100%);
+        }
+
+        .road__right-median {
+          background: $color-ground;
+          position: absolute;
+          width: 500%;
+          bottom: 0;
+          right: 0;
+          height: 100%;
+          transform: translateX(100%);
+        }
+
     }
+}
+
+@keyframes lines-forward {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: 18px;
+  }
 }
