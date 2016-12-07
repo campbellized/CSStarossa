@@ -24,7 +24,8 @@ h1 {
   height: 320px;
   width: 480px;
   margin: auto;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .canvas .canvas__inner {
     position: absolute;
     top: 0;
@@ -44,6 +45,31 @@ h1 {
     bottom: 0;
     left: 0;
     height: 40%;
-    width: 100%; }
+    width: 100%;
+    overflow: hidden;
+    perspective: 30px;
+    perspective-origin: 50% 0%; }
+  .canvas .road {
+    background: #909090;
+    height: 100%;
+    width: 300px;
+    margin: auto;
+    transform: rotateX(90deg);
+    overflow: hidden;
+    position: relative; }
+    .canvas .road .road__lines-inner {
+      border: 3px dashed #fff;
+      height: 150%;
+      width: 33%;
+      position: absolute;
+      left: 33%;
+      bottom: -3px; }
+    .canvas .road .road__lines-outer {
+      border: 3px dashed #fff;
+      height: 150%;
+      width: 100%;
+      position: absolute;
+      bottom: -3px;
+      box-sizing: border-box; }
 
 /*# sourceMappingURL=style.css.map */
